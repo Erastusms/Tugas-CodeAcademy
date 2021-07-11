@@ -7,21 +7,24 @@
 */
 
 function randomPosition(k) {
+  let temp = "";
   let randomAngka = "";
-  let randomLagi = [];
-  let randomTerus = [];
-  if (k >= 0 && k <= 9) {
-    for (let i = 0; i < 4; i++) {
-      for (let j = 0; j < 3; j++) {
-        randomAngka += Math.floor(Math.random() * 10);
-      }
-      randomAngka += "\n"
+  let arr2D = [];
+
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      randomAngka = Math.floor(Math.random() * 10);
+      arr2D.push(randomAngka);
     }
-  } else {
-    console.log("Angka anda tidak valid");
+    if (arr2D[i] === k) {
+      temp += arr2D.join("") + "\n";
+      arr2D = [];
+    } else {
+      arr2D = [];
+      i--;
+    }
   }
-  console.log(randomAngka);
+  console.log(temp);
 }
 
-// console.log(randomPosition(7));
 randomPosition(7);

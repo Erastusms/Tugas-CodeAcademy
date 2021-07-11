@@ -13,5 +13,6 @@ function isCharUnique(str) {
     return temp;
   }
   
+  console.log(isCharUnique("abcdefg"));
   console.log(isCharUnique("abcdefga"));
   

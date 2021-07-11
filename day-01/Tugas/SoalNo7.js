@@ -2,34 +2,20 @@
 // Algoritma
 /**
  * 1. buat fungsi deretSatu dengan 1 parameter
- * 2. 
+ * 2. buat var temp untuk menampung string kosong
+ * 3. buat looping for
+ * 3.1. ketentuannya i diawali dengan 1 dan batas maksimalnya adalah parameter k
+ * 3.2. var temp menampung string "1"
+ * 3.3. mencetak var temp
+ * 4. mencetak fungsi deretSatu
  */
 
-
- function deretSatu(k) {
-
+function deretSatu(k) {
+  let temp = "";
+  for (let i = 1; i <= k; i++) {
+    temp += "1";
+    console.log(temp);
+  }
 }
 
-console.log(deretSatu(5));
-
-// Algoritma
-// 1. buat variabel penampung untuk output
-// 2. masuk ke kondisi jika i kurang dari angka maka cetak 1
-// 3. variabel penampung mencetak angka 1
-// 4. cetak deret dengan += untuk penambahan nilai 
-
-function cetakDeret(angka){
-    var temp = ''
-    for(var i = 0; i < angka; i++){
-            temp += "1"
-        }
-        return temp + ",";
-    }
-
-
-console.log(cetakDeret(1));
-console.log(cetakDeret(2));
-console.log(cetakDeret(3));
-console.log(cetakDeret(4));
-console.log(cetakDeret(5));
-console.log(cetakDeret(6));
+deretSatu(5);

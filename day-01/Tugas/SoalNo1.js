@@ -23,4 +23,3 @@
   }
   
   console.log(sum(3456));
-  

@@ -23,7 +23,7 @@ function countValley(road) {
       } else if (road[i] === "U") {
         upHill++;
       }
-      if (downHill % 2 == 0 && upHill % 2 == 0) {
+      if (downHill % 4 == 0 && upHill % 4 == 0) {
         jmlhGunung++;
       }
     }
@@ -31,5 +31,4 @@ function countValley(road) {
     return jmlhGunung + " gunung";
   }
   
-  console.log(countValley("UDDUDUDU"));
-  
+  console.log(countValley("UDDDUDUU"));

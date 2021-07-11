@@ -15,7 +15,6 @@ function faktorial(k)
     var angka = 1;
     for (var i = 1; i <= k; i++) {
         angka *= i;
-        console.log(angka)
     }
     return angka;
 }

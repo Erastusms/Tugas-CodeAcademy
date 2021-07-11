@@ -27,5 +27,3 @@ function showGenap(bilGenap) {
   }
   
   console.log(showGenap("2345678"));
-  
-  

@@ -8,7 +8,7 @@
     3.2. buat seleksi kondisi
     3.2.1. ketentuannya jika road indeks ke-i adalah string D, maka var downHill bertambah 1, jika tidak maka var upHill bertambah 1
     3.2.2. buat seleksi kondisi kedua
-    3.2.2.1 ketentuannya jika var downHill dan var upHill kelipatan 4, maka var jmlhGunung bertambah 1
+    3.2.2.1 ketentuannya jika var downHill dan var upHill sudah 2 kali muncul, maka var jmlhGunung bertambah 1
     4. mengembalikan nilai var jmlhGunung
     5. mencetak fungsi countValley
 */

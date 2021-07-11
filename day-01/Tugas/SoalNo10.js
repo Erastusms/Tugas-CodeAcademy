@@ -14,14 +14,6 @@ function isPalindrome(s) {
     var x = s.length;
     for (var i = 0; i < x/2; i++) {
         if (s[i] !== s[x - 1 - i]) {
-            // iterasi pertama
-            /**
-             * ibarat x=5, i=1
-             * s = 12321
-             * s[i] !== s[x - 1 - i]
-             * s[4] !== s[5-1-4]
-             * s[4] !== s[0]
-             */
             return false;
         }
     }

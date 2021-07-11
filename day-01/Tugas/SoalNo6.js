@@ -33,4 +33,3 @@
   }
   
   console.log(deretRam(7));
-  

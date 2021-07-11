@@ -15,4 +15,3 @@ function isCharUnique(str) {
   
   console.log(isCharUnique("abcdefg"));
   console.log(isCharUnique("abcdefga"));
-  

@@ -38,4 +38,3 @@ function tukarSayurBuah(vege, sayur, buah){
 }
 
 console.log(tukarSayurBuah(gabung,'TOMAT','JERUK'))
-

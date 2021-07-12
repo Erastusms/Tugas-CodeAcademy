@@ -40,7 +40,6 @@ function konversiArray() {
   return arr2D;
 }
 
-// Fungsi ini saya modifikasi dari punya mas william
 function showProducts(products) {
   let temp = "";
 

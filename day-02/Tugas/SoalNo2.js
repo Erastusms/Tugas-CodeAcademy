@@ -1,7 +1,7 @@
 // No.2
 
 const fs = require("fs");
-let data = fs.readFileSync("./day-02/Tugas/data.csv", "utf8");
+let data = fs.readFileSync("./data.csv", "utf8");
 let splitData = data.split("\n").join(",").split(" ");
 let arr2D = [];
 

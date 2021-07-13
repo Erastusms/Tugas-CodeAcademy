@@ -18,6 +18,7 @@ function deretSatu(k) {
   }
 }
 
+// Cara lain
 // function deretSatu(k) {
 //   var temp = "";
 

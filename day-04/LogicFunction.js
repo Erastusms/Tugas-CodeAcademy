@@ -91,11 +91,26 @@ class LogicFunction {
       }
     }
 
-    console.log(`Pegawai dengan jobs id: ${jobId} berjumlah ${jmlhPegawai} orang`);
+    console.log(
+      `Pegawai dengan jobs id: ${jobId} berjumlah ${jmlhPegawai} orang`
+    );
   }
 
   salaryMinMax(employees) {
-    
+    let maxSalary = 0;
+    let minSalary = 0;
+    for (let i = 0; i < employees.length; i++) {
+      let salaryEmployee = +employees[i]["salary"];
+      if (salaryEmployee > maxSalary) {
+        maxSalary = salaryEmployee;
+        minSalary = maxSalary;
+      }
+      if (salaryEmployee < minSalary) {
+        minSalary = salaryEmployee;
+      }
+    }
+    console.log(`Gaji maksimal adalah Rp.${maxSalary}`);
+    console.log(`Gaji minimal adalah Rp.${minSalary}`);
   }
 }
 

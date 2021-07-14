@@ -1,4 +1,3 @@
-const dataEmployees = require("./employees");
 let id = 0;
 
 class LogicFunction {

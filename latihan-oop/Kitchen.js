@@ -24,10 +24,10 @@ class Kitchen {
     console.log(`${name} sedang dibuat...`);
     this.saveToCSV(cookies);
   }
+
   eat(foodName) {
     let cookies = this.getCookies();
     let newCookies = [];
-    // let id = +cookies[cookies.length - 1].id - 1;
 
     cookies.forEach((cookie) => {
       let { id, name, price, type, isSweet } = cookie;
@@ -79,7 +79,6 @@ class Kitchen {
 
     for (let i = 1; i < splitData.length; i++) {
       result.push(splitData[i].split(","));
-      // console.log(result)
     }
 
     let cookies = result.map((cookie) => {
@@ -97,25 +96,19 @@ class Kitchen {
   }
 
   saveToCSV(cookies) {
-    // Mengubah ke dalam array 2D
     let tempArray = [];
     cookies.forEach((cookie) => {
       let { id, name, price, type, isSweet } = cookie;
       tempArray.push([id, name, price, type, isSweet]);
     });
 
-    // Mengubah dan menggabungkan tiap index dalam tempArray
     let data = ["id, name, price, type, isSweet"];
     tempArray.forEach((temp) => {
       data.push(temp.join());
     });
 
-    // Menggabungkan dengan .join('\r\n)
     let fixData = data.join("\n");
-
-    // Write ke dalam csv
     fs.writeFileSync("./Cookies.csv", fixData);
-    // console.log(fixData);
   }
 }
 

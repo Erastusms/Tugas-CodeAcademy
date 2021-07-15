@@ -22,8 +22,8 @@ class View {
     });
   }
 
-  static message(msg){
-    console.log(msg)
+  static message(msg) {
+    console.log(msg);
   }
 }
 

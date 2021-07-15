@@ -28,5 +28,6 @@ switch (command) {
     Controllers.uncomplete(params)
     break;
   default:
+    Controllers.defaultMessage()
     break;
 }

@@ -35,6 +35,11 @@ class Controller {
     let msg = Model.uncomplete(params);
     View.message(msg);
   }
+
+  static defaultMessage() {
+    let msg = Model.defaultMessage();
+    View.message(msg);
+  }
 }
 
 module.exports = Controller;

@@ -104,6 +104,9 @@ class Model {
     return `"${task}" has been uncompleted!`;
   }
 
+  static defaultMessage() {
+    return "Dimohon untuk menginputkan perintah yang benar!";
+  }
   static save(data) {
     let itemString = JSON.stringify(data, null, 3);
     fs.writeFileSync("./data.json", itemString);

@@ -1,10 +1,11 @@
+let id = 0;
 class LogicFunction {
   constructor(employees) {
     this.employees = employees;
   }
   searchEmployee(employees, prefix) {
     console.log(`Pegawai yang terdapat huruf ${prefix} pada namanya adalah:`);
-    let id = 0;
+
     for (let i = 0; i < employees.length; i++) {
       let firstName = employees[i].first_name;
       let lastName = employees[i].last_name;
@@ -34,8 +35,43 @@ class LogicFunction {
     }
   }
 
-  hireRangeDate(employees, startDate, endDate) {}
-  showAges(employees, age1, age2) {}
+  hireRangeDate(employees, startDate, endDate) {
+    
+    let start = new Date(startDate);
+    let end = new Date(endDate);
+    let startYear = start.getFullYear()
+    let endYear = end.getFullYear()
+
+    console.log(`Daftar pegawai yang direkrut sejak awal tahun ${startYear} hingga akhir tahun ${endYear} :`)
+    for (let i = 0; i < employees.length; i++) {
+      let firstName = employees[i].first_name;
+      let lastName = employees[i].last_name;
+      let fullName = `${firstName} ${lastName}`;
+      
+      let hireDate = employees[i].hire_date;
+      let newHire = new Date(hireDate);
+
+      if (newHire >= start && newHire <= end) {
+        id++
+        console.log(`${id}. ${fullName}`);
+      }
+    }
+  }
+
+  showAges(employees, age1, age2) {
+    console.log(`Daftar pegawai yang memiliki umur ${age1}-${age2} tahun :`);
+    for (let i = 0; i < employees.length; i++) {
+      let employeeAge = employees[i].age;
+      let firstName = employees[i].first_name;
+      let lastName = employees[i].last_name;
+      let fullName = `${firstName} ${lastName}`;
+
+      if (employeeAge >= age1 && employeeAge <= age2) {
+        id++;
+        console.log(`${id}. ${fullName}`);
+      }
+    }
+  }
 
   totalSalaryAllEmployee(employees) {
     let result = 0;

@@ -23,15 +23,17 @@ class Controller {
 
   static delete(params) {
     let msg = Model.delete(params);
-    View.message(msg)
+    View.message(msg);
   }
 
   static complete(params) {
-    Model.complete(params);
+    let msg = Model.complete(params);
+    View.message(msg);
   }
 
   static uncomplete(params) {
-    Model.uncomplete(params);
+    let msg = Model.uncomplete(params);
+    View.message(msg);
   }
 }
 

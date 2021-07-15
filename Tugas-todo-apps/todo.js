@@ -22,8 +22,10 @@ switch (command) {
     Controllers.delete(params);
     break;
   case "complete":
+    Controllers.complete(params)
     break;
   case "uncomplete":
+    Controllers.uncomplete(params)
     break;
   default:
     break;

@@ -4,13 +4,34 @@
       "task": "Belajar Node.js",
       "status": true,
       "created_at": "2020-04-07T14:31:44.338Z",
-      "completed_at": "2020-04-07T14:31:44.338Z"
+      "completed_at": "2021-07-15T16:11:44.400Z"
    },
    {
       "id": 2,
       "task": "Download Stream",
       "status": false,
       "created_at": "2020-04-07T14:31:44.338Z",
+      "completed_at": null
+   },
+   {
+      "id": 3,
+      "task": "Mandi",
+      "status": true,
+      "created_at": "2021-07-15T15:43:52.260Z",
+      "completed_at": "2021-07-15T16:12:30.870Z"
+   },
+   {
+      "id": 4,
+      "task": "Nonton film",
+      "status": true,
+      "created_at": "2021-07-15T15:44:07.202Z",
+      "completed_at": "2021-07-15T16:12:19.139Z"
+   },
+   {
+      "id": 5,
+      "task": "Beribadah",
+      "status": false,
+      "created_at": "2021-07-15T15:54:18.097Z",
       "completed_at": null
    }
 ]

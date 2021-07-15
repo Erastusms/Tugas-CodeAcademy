@@ -75,13 +75,35 @@ class Model {
   static complete(params) {
     let data = this.getItem();
     let id = +params[0];
+    let task;
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].id === id) {
+        data[i].status = true;
+        data[i].completed_at = new Date();
+        task = data[i].task;
+      }
+    }
+
+    this.save(data);
+    return `"${task}" has been completed!`;
   }
 
   static uncomplete(params) {
     let data = this.getItem();
     let id = +params[0];
+    let task;
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].id === id) {
+        data[i].status = false;
+        data[i].completed_at = null;
+        task = data[i].task;
+      }
+    }
+
+    this.save(data);
+    return `"${task}" has been uncompleted!`;
   }
-  
+
   static save(data) {
     let itemString = JSON.stringify(data, null, 3);
     fs.writeFileSync("./data.json", itemString);

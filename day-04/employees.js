@@ -86,7 +86,7 @@ const employees = [
   {
     employee_id: 152,
     first_name: "Saul",
-    last_name: "Lemon",
+    last_name: "Agus",
     email: "lemonade@gmail.com",
     phone_number: "0812-9999-0213",
     hire_date: "2001-06-17",

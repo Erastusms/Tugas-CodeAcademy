@@ -1,19 +1,18 @@
-let id = 0;
-
 class LogicFunction {
   constructor(employees) {
     this.employees = employees;
   }
   searchEmployee(employees, prefix) {
-    console.log(`Nama pegawai yang diawali dengan huruf ${prefix} adalah:`);
+    console.log(`Pegawai yang terdapat huruf ${prefix} pada namanya adalah:`);
+    let id = 0;
     for (let i = 0; i < employees.length; i++) {
-      let firstName = employees[i]["first_name"];
-      let lastName = employees[i]["last_name"];
-
-      for (let j = 0; j < firstName.length; j++) {
-        if (prefix === firstName[j]) {
+      let firstName = employees[i].first_name;
+      let lastName = employees[i].last_name;
+      let fullName = `${firstName} ${lastName}`;
+      for (let j = 0; j < fullName.length; j++) {
+        if (prefix === fullName[j]) {
           id++;
-          console.log(`${id}. ${firstName} ${lastName}`);
+          console.log(`${id}. ${fullName}`);
         }
       }
     }
@@ -24,8 +23,8 @@ class LogicFunction {
       `Daftar Pegawai dengan minimum gaji sebesar Rp.${minSalary} dan maksimal gaji sebesar Rp.${maxSalary} adalah sebagai berikut:`
     );
     for (let i = 0; i < employees.length; i++) {
-      let employeeName = employees[i]["first_name"];
-      let salaryEmployee = +employees[i]["salary"];
+      let employeeName = employees[i].first_name;
+      let salaryEmployee = +employees[i].salary;
 
       if (salaryEmployee >= minSalary && salaryEmployee <= maxSalary) {
         console.log(
@@ -42,7 +41,7 @@ class LogicFunction {
     let result = 0;
 
     for (let i = 0; i < employees.length; i++) {
-      let salaryEmployee = +employees[i]["salary"];
+      let salaryEmployee = +employees[i].salary;
       result += salaryEmployee;
     }
     console.log(
@@ -52,10 +51,9 @@ class LogicFunction {
 
   totalSalaryByDepartment(employees, departmentId) {
     let result = 0;
-
     for (let i = 0; i < employees.length; i++) {
-      let salaryEmployee = +employees[i]["salary"];
-      let departmentEmployee = employees[i]["department_id"];
+      let salaryEmployee = +employees[i].salary;
+      let departmentEmployee = employees[i].department_id;
       if (departmentId === departmentEmployee) {
         result += salaryEmployee;
       }
@@ -65,14 +63,13 @@ class LogicFunction {
     );
   }
 
-  totalEmployeeByDepartment(employees, departmentId) {
+  totalEmployeeByDepartment(employees) {
     let jmlhPegawai = 0;
-
+    let departmentId = 9;
     for (let i = 0; i < employees.length; i++) {
-      let employeesDepartment = employees[i]["department_id"];
-      let firstName = employees[i]["first_name"];
+      let departmentEmployee = employees[i].department_id;
 
-      if (departmentId === employeesDepartment) {
+      if (departmentId === departmentEmployee) {
         jmlhPegawai++;
       }
     }
@@ -81,10 +78,11 @@ class LogicFunction {
     );
   }
 
-  totalEmployeeByJobId(employees, jobId) {
+  totalEmployeeByJobId(employees) {
     let jmlhPegawai = 0;
+    let jobId = 4;
     for (let i = 0; i < employees.length; i++) {
-      let jobsId = employees[i]["job_id"];
+      let jobsId = employees[i].job_id;
       if (jobId === jobsId) {
         jmlhPegawai++;
       }
@@ -99,7 +97,7 @@ class LogicFunction {
     let maxSalary = 0;
     let minSalary = 0;
     for (let i = 0; i < employees.length; i++) {
-      let salaryEmployee = +employees[i]["salary"];
+      let salaryEmployee = +employees[i].salary;
       if (salaryEmployee > maxSalary) {
         maxSalary = salaryEmployee;
         minSalary = maxSalary;
